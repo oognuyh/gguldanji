@@ -10,10 +10,11 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class TalkServiceImpl implements TalkService{@Override
+public class TalkServiceImpl implements TalkService{
 	
 	private final TalkDao talkDao;
 	
+	@Override
 	public List<Talk> getList(String kaptCode) {
 		return talkDao.getList(kaptCode);
 	}
@@ -21,13 +22,11 @@ public class TalkServiceImpl implements TalkService{@Override
 	@Override
 	public Talk addComment(Talk talk) {
 		return talkDao.addComment(talk);
-		
 	}
 
 	@Override
-	public Talk deleteComment(Talk talk) {
-		return talkDao.deleteComment(talk);
-		
+	public Talk deleteComment(int talkNo) {
+		return talkDao.deleteComment(talkNo);
 	}
 
 }

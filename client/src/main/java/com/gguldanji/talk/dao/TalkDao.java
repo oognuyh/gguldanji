@@ -16,13 +16,13 @@ public interface TalkDao {
 	@Select("SELECT * FROM comments WHERE apt_code= #{kaptCode}")
 	List<Talk> getList(@Param("kaptCode") String kaptCode);
 	
-	@Insert("INSERT INTO comments(user_id, parent, child, comment, createdAt)"
-			+ " values(#{userId}, #{parent}, #{child}, #{comment}, sysdate)")
-	int addComment (Talk talk);
+	@Insert("INSERT INTO comments(talk_no, user_id, parent, child, comment, createdAt)"
+			+ " values(#{talkNo}, #{userId}, #{parent}, #{child}, #{comment}, sysdate)")
+	Talk addComment (Talk talk);
 	
 	@Delete("DELETE FROM comments "
-			+ " WHERE user_id= #{userId} AND (parent= #{parent} OR child= #{child}) ")
-	int deleteComment (Talk talk);
+			+ " WHERE talk_no= #{talkNo}) ")
+	Talk deleteComment (int talkNo);
 	
 	
 	
