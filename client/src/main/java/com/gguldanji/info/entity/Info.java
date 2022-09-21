@@ -1,11 +1,6 @@
 package com.gguldanji.info.entity;
 
-import java.time.LocalDateTime;
-import java.util.UUID;
-
 import org.apache.ibatis.type.Alias;
-
-import com.gguldanji.notice.entity.Notice;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,6 +19,8 @@ import lombok.ToString;
 public class Info {
 	
 	@EqualsAndHashCode.Include private String kaptCode; // 단지코드
+	
+	// entity 필요성 ?.?
 	
 	private String kaptName; // 단지명
 	

@@ -1,7 +1,7 @@
 package com.gguldanji.info.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.gguldanji.info.entity.Info;
@@ -17,13 +17,13 @@ public class InfoController {
 	
 	// 기본 정보 제공
 	@GetMapping("/api/infos")
-	public Info Basic(@RequestBody Info info) {
+	public Info Basic(@RequestParam String kaptCode) {
 		return infoService.Basic(info);
 	}
 	
 	// 상세 정보 제공
 	@GetMapping("/api/infos/detail")
-	public Info Detail(@RequestBody Info info) {
+	public Info Detail(@RequestParam String kaptCode) {
 		return infoService.Detail(info);
 	}
 	
