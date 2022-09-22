@@ -16,12 +16,12 @@ public class InfoServiceImpl implements InfoService {
 	@Override
 	public Info Basic(String kaptCode) {
 		// kaptCode 받고, info return 해주기
-		return infoDao.Basic(kaptCode, info);
+		return infoDao.Basic(kaptCode);
 	}
 
 	@Override
 	public Info Detail(String kaptCode) {
-		return infoDao.Detail(Info);
+		return infoDao.Detail(kaptCode);
 	}
 	
 }

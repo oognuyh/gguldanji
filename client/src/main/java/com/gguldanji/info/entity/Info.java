@@ -20,18 +20,9 @@ public class Info {
 	
 	@EqualsAndHashCode.Include private String kaptCode; // 단지코드
 	
-	// entity 필요성 ?.?
+	private Info basicAllInfo;
 	
-	private String kaptName; // 단지명
-	
-	private String kaptAddr; // 법정동주소
-	
-	private String codeSaleNm; // 분양
-	
-	private int kaptdaCnt; // 세대수
-	
-	private int kaptDongCnt; // 동수
-	
+	private Info detailAllInfo;
 	
 	
 }
