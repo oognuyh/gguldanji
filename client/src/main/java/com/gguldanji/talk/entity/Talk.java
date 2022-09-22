@@ -15,15 +15,11 @@ import lombok.ToString;
 @Alias("Talk")
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Talk {
-	@EqualsAndHashCode.Include private int talkNo;
+	@EqualsAndHashCode.Include private int talkNo; // 댓글마다 구분 가능한 고유 번호
 
 	private String kaptCode;
 	
 	private String userId;
-	
-	private int parent;
-	
-	private int child;
   
 	private String comment;
   

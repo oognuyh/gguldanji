@@ -16,8 +16,8 @@ public interface TalkDao {
 	@Select("SELECT * FROM comments WHERE apt_code= #{kaptCode}")
 	List<Talk> getList(@Param("kaptCode") String kaptCode);
 	
-	@Insert("INSERT INTO comments(talk_no, user_id, parent, child, comment, createdAt)"
-			+ " values(#{talkNo}, #{userId}, #{parent}, #{child}, #{comment}, sysdate)")
+	@Insert("INSERT INTO comments(talk_no, user_id, comment, createdAt)"
+			+ " values(#{talkNo}, #{userId}, #{comment}, sysdate)")
 	Talk addComment (Talk talk);
 	
 	@Delete("DELETE FROM comments "

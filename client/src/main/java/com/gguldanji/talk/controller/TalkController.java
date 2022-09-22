@@ -29,6 +29,7 @@ public class TalkController {
 	// 댓글 달기
 	@PostMapping("/api/talks")
 	public Talk addTalk(@RequestBody Talk talk) {
+		// talk에 kaptCode, userID, comment 받아오기
 		return talkService.addComment(talk);
 	}
 	

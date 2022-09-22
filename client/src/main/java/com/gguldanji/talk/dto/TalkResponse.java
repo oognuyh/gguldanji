@@ -14,12 +14,6 @@ public class TalkResponse {
 	// 작성자
 	private String userId;
 	
-	// 부모 구분
-	private int parent;
-	
-	// 자식 구분
-	private int child;
-	
 	// comment 
 	private String comment;
 	
