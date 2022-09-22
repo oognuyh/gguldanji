@@ -18,7 +18,6 @@ public class InfoController {
 	// 기본 정보 제공
 	@GetMapping("/api/infos")
 	public Info Basic(@RequestParam String kaptCode) {
-		infoService.Basic(kaptCode);
 		return infoService.Basic(kaptCode);
 	}
 	
